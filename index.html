@@ -33,36 +33,46 @@
 								<li>Companies need better fraud detection tools</li>
 								<li>Machine learning offers a scalable, data-driven solution</li>
 							<br>
-							<h4>How do transactional and behavioral factors affect the likelihood of a person being a fraud victim?</h4>
-							<h4>Data Engineering and Host</h4>
-								<li>Use SteamDB to fetch all game names and ID</li>
-								<li>Use SteamWeb API to obtain structured metadata of games</li>
-								<li>Use AWS RDS to store the structured game metadata</li>
-								<li>Use AWS DynamoDB to store the user reviews for each game</li>
+							<h4><b>How do transactional and behavioral factors affect the likelihood of a person being a fraud victim?</b></h4>
+							<h4>RQ1: Would certain types of merchants have a higher possibility of fraudulent transactions? </h4>
+								<li>H1: Some types of merchants are more likely to have fraudulent transactions than others</li>
+								<li>H0: The type of merchant does not affect the likelihood of a transaction being fraudulent</li>
+								<li>X: Merchant type (category)</li>
+								<li>Y: Fraud occurrence (is_fraud)</li>
 							<br>
-							<h4>Frontend and Backend</h4>
-								<li>Create a website with Python Flask</li>
-								<li>Designed the backend to connect with AWS RDS and DynamoDB to suggest purchase decisions</li>
+							<h4>RQ2: Would merchants in more populated cities be more likely to be fraudulent compared to those in less populated cities?</h4>
+								<li>H1: Merchants in cities with larger populations are more likely to have fraudulent transactions than those in smaller cities</li>
+								<li>H0: The population size of a city does not affect how likely a merchant is to have fraudulent transactions</li>
+								<li>X: Number of population (city_pop)</li>
+								<li>Y: Fraud occurrence (is_fraud)</li>
 							<br>
-							<h4>Cloud Infrastructure</h4>
-								<li>Set up virtual private cloud, security groups for EC2 instance and RDS, and 4 subnets (2 public and 2 private)</li>
-								<li>Configure EC2 instance</li>
-								<li>Populate RDS and local DynamoDB</li>
-								<li>Set up an AWS S3 bucket to store all raw data and code</li>
-								<li>Used AWS Lambda function to stop the instance periodically for webpage and database maintenance purposes</li>
+							<h4>RQ3: Would the transaction hour of the day affect the probability of fraud in digital transactions?</h4>
+								<li>H1: Certain transaction hours of the day are more likely to have fraudulent transactions than others</li>
+								<li>H0: The transaction hour of the day does not affect the likelihood of a transaction being fraudulent</li>
+								<li>X: Transaction time (transaction_hour)</li>
+								<li>Y: Fraud occurrence (is_fraud)</li>
 							<br>
-							<h4>Financial Estimation</h4>
-								<li>Calculate the cost of services across different cloud platforms (AWS, Google Cloud Platform, and Microsoft Azure)</li>
-								<li>Set up performance metrics and expectations</li>
+							<h4>Analytical Techniques</h4>
+								<li>Clustering (k-means & model-based)</li>
+								<li>Predictive models (logistic regression, random forest, neural network, and deep learning)</li>
+							<br>
+							<h4>Goal for Business Use Case</h4>
+								<li>Minimize cost of loss, strengthen customer trust, and protect customers</li>
+								<li>Identify the most effective method to detect fraudulent transactions</li>
+								<ol>
+									<li>Top priority is to identify as many real fraud cases as possible</li>
+									<li>Need high sensitivity and low false negative rate</li>
+									<li>Lower precision rate as a tradeoff is acceptable</li>
+								</ol>
 							<h4></h4>
 							<div class="row">
 								  <article class="col-12 col-12-max work-item" style="height: 100vh;">
 									  <iframe 
-									    src="Max_Wong_Project_AI_Cloud_based_Recommender.pdf" 
+									    src="Max_Wong_Project_Fraud_Detection.pdf" 
 									    width="100%" 
 									    height="100%" 
 									    style="border: none;" 
-									    title="ai-recommender">
+									    title="fraud-detection">
 									  </iframe>
 								  </article>
 								  <article class="work-item" style="text-align: center; padding: 2em;">
